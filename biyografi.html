@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Einstein Biyografisi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content h1 {
+            margin-left: 500px; /* Başlığı 300px sola kaydır */
+        }
+
+        .search-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input[type="text"] {
+            border: none;
+            padding: 8px;
+        }
+
+        .search-box button {
+            border: none;
+            background-color: #007bff;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: #0056b3;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+        }
+
+        .menu-item {
+            padding: 10px 20px;
+            transition: background-color 0.3s; /* Geçiş efekti */
+        }
+
+        .menu-item a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+        }
+
+        .menu-item:hover {
+            background-color: #333; /* Hover efekti */
+        }
+
+        .menu-item a:hover {
+            color: #f1f1f1;
+        }
+
+        .main-content {
+            margin-left: 200px; /* Sol menü genişliği kadar içerik sağa kaydırılacak */
+            padding: 20px; /* İçeriğin kenarlardan boşluk bırakması */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Albert Einstein Biyografisi</h1>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Ara...">
+                <button onclick="search()">Ara</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <div class="menu-item">
+            <a href="index.html">Anasayfa</a>
+        </div>
+        <div class="menu-item">
+            <a href="biyografi.html">Biyografi</a>
+        </div>
+        <div class="menu-item">
+            <a href="iletişim.html">İletişim</a>
+        </div>
+        <div class="menu-item">
+            <a href="çalışmalar.html">Çalışmalar</a>
+        </div>
+        <div class="menu-item">
+            <a href="eğitim.html">Eğitim</a>
+        </div>
+        <div class="menu-item">
+            <a href="özelhayat.html">Özel hayat</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h2>Biyografi</h2>
+        <p>
+            Albert Einstein (d. 14 Mart 1879, Ulm, Almanya - ö. 18 Nisan 1955, Princeton, New Jersey, ABD), teorik fizik alanındaki çalışmalarıyla tanınan Almanya doğumlu teorik fizikçi. Özel ve genel görelilik kuramları ile kuantum mekaniği kuramına yaptığı katkılarla bilim dünyasında önemli bir yere sahiptir.
+        </p>
+        <p>
+            1905 yılında yayımladığı dört makale, fiziğin o güne kadar bilinen yasalarını kökten değiştirmiştir. Bunlar, fotoelektrik olayın açıklanması, Brown hareketi, özel görelilik ve kütle-enerji ilişkisinin formülasyonu üzerinedir. Özel görelilik teorisinin açıkladığı fenomenler, gözlem ve deneylerle defalarca doğrulanmıştır.
+        </p>
+        <p>
+            1915 yılında yayımladığı genel görelilik teorisi, yerçekiminin uzay-zamanın eğriliği tarafından tanımlandığını öne sürmüş ve kozmoloji alanında yeni perspektifler sunmuştur. Einstein, bu teorinin tahmin ettiği gözlemleri doğrulamak için çaba sarf etmiş, örneğin 1919'da Güneş etrafındaki yıldızların pozisyonlarındaki sapmaların bir gözlemci tarafından öngörüldüğü gibi gerçekleştiği gözlemlenmiştir.
+        </p>
+        <p>
+            1921 yılında Nobel Fizik Ödülü'nü, fotoelektrik etki üzerine yaptığı çalışmalar nedeniyle kazanmıştır. Einstein'ın bilim dünyasındaki itibarı, akıl hocası Max Planck'ın, bir zamanlar "en tehlikeli insan" olarak nitelendirdiği durumdan hızla sıçradı.
+        </p>
+        <p>
+            Einstein, II. Dünya Savaşı'nın ardından Amerika Birleşik Devletleri'nde kalmaya karar vermiş ve Princeton, New Jersey'deki Institute for Advanced Study'de çalışmaya başlamıştır. Son yıllarında, klasik birleşik alan teorisine ulaşma çabaları gibi daha teorik konulara odaklandı ve bu çalışmalar onun hayatının geri kalanında büyük ölçüde tanınmasına yardımcı oldu.
+        </p>
+    </div>
+
+    <footer>
+        <p>© 2024 Albert Einstein Biyografisi</p>
+    </footer>
+
+    <script>
+        function search() {
+            var input = document.getElementById("search-input").value.toLowerCase();
+            var titles = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+            for (var i = 0; i < titles.length; i++) {
+                var titleText = titles[i].textContent.toLowerCase();
+                if (titleText.includes(input)) {
+                    var pageURL = window.location.href.split("/").pop();
+                    var pageTitle = titles[i].textContent.toLowerCase().replace(/\s+/g, "-");
+                    var targetURL = pageURL.replace("index.html", pageTitle + ".html");
+                    window.location.href = targetURL;
+                    return;
+                }
+            }
+
+            alert("Aranan sayfa bulunamadı.");
+        }
+    </script>
+</body>
+</html>

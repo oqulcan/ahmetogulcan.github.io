@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input[type="text"] {
+    border: none;
+    padding: 8px;
+}
+
+.search-box button {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.menu-item {
+    padding: 10px 20px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+
+.menu-item a:hover {
+    color: #f1f1f1;
+}
+
+.main-content {
+    margin-left: 200px; /* Sol menü genişliği kadar içerik sağa kaydırılacak */
+    padding: 20px; /* İçeriğin kenarlardan boşluk bırakması */
+}
+
+.menu-item img {
+    width: 32px; /* İkon genişliği */
+    height: 32px; /* İkon yüksekliği */
+    margin-right: 8px; /* İkonlar arasında bir boşluk bırakmak için */
+}

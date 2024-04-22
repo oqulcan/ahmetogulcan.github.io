@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Einstein Eğitim</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content h1 {
+            margin-left: 500px;
+        }
+
+        .search-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input[type="text"] {
+            border: none;
+            padding: 8px;
+        }
+
+        .search-box button {
+            border: none;
+            background-color: #007bff;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: #0056b3;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+        }
+
+        .menu-item {
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-item a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+        }
+
+        .menu-item:hover {
+            background-color: #333;
+        }
+
+        .menu-item a:hover {
+            color: #f1f1f1;
+        }
+
+        .main-content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Albert Einstein Biyografisi</h1>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Ara...">
+                <button onclick="search()">Ara</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <div class="menu-item">
+            <a href="index.html">Anasayfa</a>
+        </div>
+        <div class="menu-item">
+            <a href="biyografi.html">Biyografi</a>
+        </div>
+        <div class="menu-item">
+            <a href="iletişim.html">İletişim</a>
+        </div>
+        <div class="menu-item">
+            <a href="çalışmalar.html">Çalışmalar</a>
+        </div>
+        <div class="menu-item">
+            <a href="eğitim.html">Eğitim</a>
+        </div>
+        <div class="menu-item">
+            <a href="özelhayat.html">Özel hayat</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h2>Eğitim ve Ödüller</h2>
+        <p>
+            Albert Einstein, Zürih Politeknik Okulu'nda eğitim gördü. 1900 yılında öğrencilik yıllarında, dengeli notlar almasına rağmen, matematik ve fizik alanlarındaki derslerde oldukça başarısızdı. Bir matematik öğretmeninin tavsiyesi üzerine fizik alanına yöneldi. 1905 yılında, "özel görelilik" teorisini geliştirdi ve üniversiteye geri döndüğünde doktorasını aldı.
+        </p>
+        <p>
+            Einstein, kariyeri boyunca birçok ödül ve onur aldı. Bunlar arasında 1921'de Nobel Fizik Ödülü, fotoelektrik etki üzerine yaptığı çalışmalar nedeniyle, öne çıkıyor. Ayrıca, 1925'te Copley Madalyası, 1929'da Barnard Madalyası, 1935'te Franklin Madalyası ve 1951'de Royal Society Copley Madalyası gibi prestijli ödülleri kazandı.
+        </p>
+    </div>
+
+    <footer>
+        &copy; 2024 Albert Einstein Eğitim
+    </footer>
+
+    <script>
+        function search() {
+            var input = document.getElementById("search-input").value.toLowerCase();
+            var titles = document.querySelectorAll(".menu-item a");
+
+            for (var i = 0; i < titles.length; i++) {
+                var titleText = titles[i].textContent.toLowerCase();
+                if (titleText.includes(input)) {
+                    var targetURL = titles[i].href;
+                    window.location.href = targetURL;
+                    return;
+                }
+            }
+
+            alert("Aranan sayfa bulunamadı.");
+        }
+    </script>
+</body>
+</html>
